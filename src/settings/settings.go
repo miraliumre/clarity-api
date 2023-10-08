@@ -20,7 +20,7 @@ type Settings struct {
 func Init() *Settings {
 	s := &Settings{}
 
-	s.BindAddr = env.ReadStr("CLARITY_BIND_ADDR", ":8080")
+	s.BindAddr = env.ReadStr("CLARITY_BIND_ADDR", "0.0.0.0:8080")
 
 	s.EnableDebug = env.ReadBool("CLARITY_DEBUG_MODE", false)
 	s.EnableDocuments = env.ReadBool("CLARITY_DOCUMENTS", false)
