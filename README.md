@@ -1,5 +1,7 @@
 # Clarity API
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=miraliumre_clarity-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=miraliumre_clarity-api) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=miraliumre_clarity-api&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=miraliumre_clarity-api) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=miraliumre_clarity-api&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=miraliumre_clarity-api)
+
 The Clarity API is a subsystem of Clarity, a solution developed by Miralium
 Research for document validation.
 
