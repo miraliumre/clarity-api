@@ -1,0 +1,11 @@
+# JetBrains IDEs
+.idea/
+
+# VSCode
+.vscode
+
+# Files created by MacOS
+.DS_Store
+
+# Files created by Windows
+Thumbs.db

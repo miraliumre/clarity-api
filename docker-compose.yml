@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+
+  clarity-api:
+    build: .
+    image: miraliumre/clarity-api:development
+    ports:
+      - 127.0.0.1:8080:8080
+    depends_on:
+      - redis
+    networks:
+      - clarity-api
+    volumes:
+      - ./test/data:/usr/local/clarity/certs:ro
+    environment:
+      - CLARITY_DEBUG_MODE=1
+      - CLARITY_DOCUMENTS=1
+      - CLARITY_CERTS=1
+      - CLARITY_REDIS_ADDR=redis:6379
+  
+  redis:
+    image: redis/redis-stack:latest
+    ports:
+      - 127.0.0.1:6379:6379
+      - 127.0.0.1:8001:8001
+    networks:
+      - clarity-api
+    volumes:
+      - redis-data:/data:rw
+
+networks:
+  clarity-api:
+
+volumes:
+  redis-data:
